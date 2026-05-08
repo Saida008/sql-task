@@ -1,0 +1,13 @@
+ CREATE TABLE job(
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    title VARCHAR (60) NOT NULL
+ );
+ 
+ CREATE TABLE employer(
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    name VARCHAR (60) NOT NULL,
+    degree VARCHAR (60) NOT NULL,
+    salary NUMERIC(40) NOT NULL,
+    job_id BIGINT REFERENCES job(id)
+ );
+
