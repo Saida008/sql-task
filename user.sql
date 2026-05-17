@@ -1,4 +1,4 @@
- CREATE TABLE job(
+ CREATE TABLE  IF NOT EXISTS job(
     id BIGSERIAL NOT NULL PRIMARY KEY,
     title VARCHAR (60) NOT NULL
  );
@@ -11,3 +11,9 @@
     job_id BIGINT REFERENCES job(id)
  );
 
+CREATE TABLE users (
+   id BIGSERIAL NOT NULL PRIMARY KEY,
+   username VARCHAR(60) NOT NULL,
+   email VARCHAR(60) NOT NULL,
+   password VARCHAR(255) NOT NULL
+);
